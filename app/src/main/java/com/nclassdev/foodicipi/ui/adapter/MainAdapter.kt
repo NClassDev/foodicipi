@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.nclassdev.foodicipi.R
 import com.nclassdev.foodicipi.core.BaseViewHolder
 import com.nclassdev.foodicipi.domain.model.RecipeGist
+import kotlinx.android.synthetic.main.fragment_detail.view.*
 import kotlinx.android.synthetic.main.recipes_item.view.*
 
 class MainAdapter (private val context: Context, private val recipeList: List<RecipeGist>, private val itemClickListener: OnRecipeClickListener) :
@@ -34,15 +35,23 @@ class MainAdapter (private val context: Context, private val recipeList: List<Re
     }
 
     inner class MainViewHolder(itemView: View): BaseViewHolder<RecipeGist>( itemView){
-        override fun bind(item: RecipeGist, position: Int) {
-            Glide.with(context).load(item.dishImageUrl).into(itemView.recipes_item_dish_image)
-            itemView.recipes_item_author_text.text = item.dishName
-            itemView.recipes_item_like_count_text.text = item.glutenFree.toString()
+        override fun bind(recipe: RecipeGist, position: Int) {
+            Glide.with(context).load(recipe.dishImageUrl).into(itemView.recipes_item_dish_image)
+            itemView.recipes_item_name_text.text = recipe.dishName
+            //itemView.recipes_item_like_count_text.text = item.glutenFree.toString()
 //            itemView.recipes_item_like_count_text.text = item.likesCount.toString()
-            itemView.recipes_item_time_count_text.text = item.cookingTime.toString()
+            //itemView.recipes_item_time_count_text.text = item.cookingTime.toString()
             itemView.setOnClickListener {
-                itemClickListener.onRecipeClick(item, position)
+                itemClickListener.onRecipeClick(recipe, position)
             }
+
+            itemView.recipes_item_name_text.text = recipe.dishName
+
+
+
+
         }
     }
+
+
 }

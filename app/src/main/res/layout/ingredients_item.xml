@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_height="120dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ingredient_image"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/ingredient_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ingredient_image"
+                android:layout_alignTop="@+id/ingredient_image"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="51dp"
+                android:background="@drawable/picture_solid_bot"
+                android:padding="10dp"
+                android:text="TextView"
+                android:fontFamily="@font/serifpro"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ingredient_cuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/serifpro"
+                android:layout_alignStart="@+id/ingredient_title"
+                android:layout_alignEnd="@+id/ingredient_title"
+                android:layout_marginStart="2dp"
+                android:maxLines="2"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

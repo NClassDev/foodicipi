@@ -1,10 +1,14 @@
-package com.nclassdev.foodicipi.application.injection
+package com.nclassdev.foodicipi.di
 
+import android.content.Context
+import androidx.room.Room
+import com.nclassdev.foodicipi.data.source.local.AppDatabase
 import com.nclassdev.foodicipi.data.source.remote.network.SpoonacularApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.CertificatePinner
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -62,12 +66,24 @@ object AppModule {
             .build()
     }
 
+    @Singleton
+    @Provides
+    fun provideWebService(retrofit:Retrofit) = retrofit.create(SpoonacularApiService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideRoomInstance(
+        @ApplicationContext context: Context
+    ) = Room.databaseBuilder(
+        context,
+        AppDatabase::class.java,
+        "favoriteTable"
+    ).fallbackToDestructiveMigration().build()
 
 
 
     @Singleton
     @Provides
-    fun provideWebService(retrofit:Retrofit) = retrofit.create(SpoonacularApiService::class.java)
-
+    fun provideFavoriteRecipeDao(db:AppDatabase) = db.favoriteRecipeDao()
 
 }

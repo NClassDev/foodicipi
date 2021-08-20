@@ -7,5 +7,6 @@ data class RecipeGist(
     val dishName: String,
     val dishId: Int,
     val creditText: String,
-    val glutenFree: Boolean
-    )
+    val glutenFree: Boolean,
+    val dairyFree: Boolean
+)

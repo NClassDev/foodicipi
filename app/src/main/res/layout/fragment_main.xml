@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.MainFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_main_searchView_mcv_search_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        android:layout_marginVertical="@dimen/margin_small"
+        app:cardCornerRadius="@dimen/search_view_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/fragment_main_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:iconifiedByDefault="false"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:queryBackground="@color/transparent"
+            android:queryHint="              Search Recipes"
+            android:searchHintIcon="@null"
+            android:background = "@color/brown_light"
+            android:searchIcon="@drawable/ic_search" />
+
+    </com.google.android.material.card.MaterialCardView>
 
 
     <RelativeLayout
@@ -22,11 +47,31 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/fragment_main_pref_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/redhatmedium"
+        android:textColor="@color/green_black"
+        android:text="@string/preferences"
+        app:layout_constraintBottom_toTopOf="@+id/rcyclview_recipes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_searchView_mcv_search_view" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcyclview_recipes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:outlineProvider="bounds"
 
-</LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_pref_title"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

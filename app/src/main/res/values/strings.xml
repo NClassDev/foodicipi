@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">FoodiCipi</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intolerance">Intolerances</string>
+    <string name="summary_title">Summary</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="account">Account</string>
+    <string name="preferences">Preferences</string>
+    <string name="favorites">Favorites</string>
 </resources>

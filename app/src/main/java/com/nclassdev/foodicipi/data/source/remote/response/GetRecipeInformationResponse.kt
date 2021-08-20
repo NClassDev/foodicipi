@@ -2,6 +2,7 @@ package com.nclassdev.foodicipi.data.source.network.remote.response
 
 import com.google.gson.annotations.SerializedName
 
+
 data class GetRecipeInformationResponse(
     @SerializedName("aggregateLikes")
     val likesCount: Int?,

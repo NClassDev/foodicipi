@@ -11,17 +11,6 @@ class MainViewModel @ViewModelInject constructor(
     private val remoteUseCase: RemoteUseCase
 ) : ViewModel(){
 
-//    private var currentSource : LiveData<Resource<List<RecipeGist>>> =
-//        repository.getRandomRecipes()
-//
-//
-//    val homeMediatorLiveData = MediatorLiveData<Resource<List<RecipeGist>>>()
-//
-//    init {
-//        homeMediatorLiveData.addSource(currentSource) {
-//            homeMediatorLiveData.postValue(it)
-//        }
-//    }
     val homeMediatorLiveData = MediatorLiveData<Resource<List<RecipeGist>>>()
 
     private var currentSource : LiveData<Resource<List<RecipeGist>>> =
