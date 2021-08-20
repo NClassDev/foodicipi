@@ -2,11 +2,12 @@
 Foodicipi
 
 Kotlin based
-- Clean 
+- Clean Architecture
 - Coroutines 
 - MVVM Architecture: View - DataBinding - ViewModel - Model
 - Dagger Hilt
 - Room
+- Live Data
 - Navigation Components
 - Repository pattern
 - Retrofit2 and OkHttp3
