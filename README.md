@@ -2,7 +2,7 @@
 Foodicipi
 
 Kotlin based
-
+- Clean 
 - Coroutines 
 - MVVM Architecture: View - DataBinding - ViewModel - Model
 - Dagger Hilt
