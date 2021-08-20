@@ -3,14 +3,15 @@ Foodicipi
 
 Kotlin based
 
-Coroutines 
-MVVM Architecture: View - DataBinding - ViewModel - Model
-Dagger Hilt
-Room
-Navigation Components
-Repository pattern
-Retrofit2 and OkHttp3
-Material Design Components
+**- Coroutines 
+- MVVM Architecture: View - DataBinding - ViewModel - Model
+- Dagger Hilt
+- Room
+- Navigation Components
+- Repository pattern
+- Retrofit2 and OkHttp3
+- Material Design Components**
+
 
 Screenshots
 
